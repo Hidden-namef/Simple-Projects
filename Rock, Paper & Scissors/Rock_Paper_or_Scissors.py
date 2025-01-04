@@ -4,15 +4,20 @@ def Welcome():
     print('Welcome to the rock, paper & scissors game\n')
 
     while True:
-        want_play = input('Do you want to play? (Yes/No): ').lower()
-        if  want_play == 'yes':
-            print('Ok, nice!!!\n')
-            break
-        elif want_play == 'no':
-            print('\nOh, I see. See you later!')
+        try:
+            want_play = input('Do you want to play? (Yes/No): ').lower()
+            if  want_play == 'yes':
+                print('Ok, nice!!!\n')
+                break
+            elif want_play == 'no':
+                print('\nOh, I see. See you later!')
+                exit()
+            else:
+                print('\nIt is not a valid answer. Try again\n')
+        except KeyboardInterrupt:
+            print('Keyboard interrupt signal detected.')
+            print('Exiting...')
             exit()
-        else:
-            print('\nIt is not a valid answer. Try again\n')
 
 def Main():
     Attemps = 3
