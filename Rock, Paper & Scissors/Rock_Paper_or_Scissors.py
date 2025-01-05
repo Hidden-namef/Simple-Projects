@@ -20,11 +20,11 @@ def Welcome():
             exit()
 
 def Main():
-    Attemps = 3
+    Attempts = 3
     options = ['Rock', 'Paper', 'Scissors']
 
     Computer_choose = random.choice(options)
-    while Attemps > 0:
+    while Attempts > 0:
         while True:
             User_input = input(
                 'Choose an option:\n'
@@ -40,26 +40,26 @@ def Main():
                 break
 
         if User_input == 'Rock' and Computer_choose == 'Paper':
-            Attemps -= 1
-            print(f'\nYou lost this round. You now have {Attemps} attemps\n')
+            Attempts -= 1
+            print(f'\nYou lost this round. You now have {Attempts} attempts\n')
 
         elif User_input == 'Rock' and Computer_choose == 'Scissors':
-            print(f'Congratulations!!!. You win the game with {Attemps} attemps')
+            print(f'Congratulations!!!. You win the game with {Attempts} attempts')
             exit()
         
         elif User_input == 'Scissors' and Computer_choose == 'Paper':
-            print(f'Congratulations!!!. You win the game with {Attemps} attemps')
+            print(f'Congratulations!!!. You win the game with {Attempts} attempts')
             exit()
         
         elif User_input == 'Scissors' and Computer_choose == 'Rock':
-            print(f'\nYou lost this round. You now have {Attemps} attemps\n')
+            print(f'\nYou lost this round. You now have {Attempts} attempts\n')
         
         elif User_input == 'Paper' and Computer_choose == 'Rock':
-            print(f'Congratulations!!!. You win the game with {Attemps} attemps')
+            print(f'Congratulations!!!. You win the game with {Attempts} attempts')
             exit()
         
         elif User_input == 'Paper' and Computer_choose == 'Scissors':
-            print(f'\nYou lost this round. You now have {Attemps} attemps\n')
+            print(f'\nYou lost this round. You now have {Attempts} attemps\n')
         
         elif User_input == Computer_choose:
             print('\nDraw\n')
